@@ -1,0 +1,13 @@
+version: '3'
+services:
+  magneto:
+        image: magneto
+        expose:
+            - 8080
+        ports:
+            - 8080:8080
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
