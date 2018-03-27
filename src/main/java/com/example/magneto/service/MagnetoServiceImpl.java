@@ -3,6 +3,7 @@ package com.example.magneto.service;
 import org.springframework.stereotype.Service;
 
 import com.example.magneto.domain.InvalidDNAException;
+import com.example.magneto.service.MagnetoService;
 
 /**
  * Implementacion del servicio MagnetoService.

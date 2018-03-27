@@ -1,5 +1,6 @@
 package com.example.magneto.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.magneto.domain.DnaSequence;
 import com.example.magneto.service.MagnetoService;
-import com.example.magneto.service.MagnetoServiceImpl;
 
 /**
  * Web Controller
@@ -18,7 +18,8 @@ import com.example.magneto.service.MagnetoServiceImpl;
 @RequestMapping("/mutant")
 public class Controller {
 
-	MagnetoService service = new MagnetoServiceImpl();
+	@Autowired
+	MagnetoService service;
 
 	@RequestMapping(method = RequestMethod.POST)
 	ResponseEntity<?> post(@RequestBody DnaSequence dna) {
