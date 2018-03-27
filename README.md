@@ -12,6 +12,6 @@ POST https://magneto-199307.appspot.com/mutant
 
 # Instructions to run locally:
 
- - mvn clean install
+ - mvn package (to generate jar file)
  - docker build -t magneto .
  - docker-compose up
